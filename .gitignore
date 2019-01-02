@@ -9,7 +9,6 @@
 # dependencies
 /node_modules
 
-
 # misc
 /.sass-cache
 /connect.lock
@@ -28,3 +27,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+package-lock.json
