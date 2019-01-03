@@ -1,30 +1,28 @@
+
+import { NgModule , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { PostsComponent } from './posts/posts.component';
-import { DetailsComponent } from './details/details.component';
-import { UsersComponent } from './users/users.component';
-import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LandingPageComponent } from '@landing-components/landing-page.component';
+import { LandingPageModuleModule } from '@landing-components/landing-page-module.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    PostsComponent,
-    DetailsComponent,
-    UsersComponent
+    LandingPageComponent
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LandingPageModuleModule
   ],
-  providers: [DataService],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

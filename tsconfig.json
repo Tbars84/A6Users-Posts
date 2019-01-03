@@ -15,6 +15,19 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+        "paths": {  
+          "@app/*": [
+            "app/*"
+          ],
+          "@landing-components/*": [
+            "src/app/landing-page/*"
+          ],
+          "@landing-services/*": [
+            "src/app/services/*"
+          ]
+        },
+        "module": "es2015"
+
   }
 }
