@@ -1,5 +1,5 @@
 
-import { NgModule , CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingPageComponent } from '@landing-components/landing-page.component';
 import { LandingPageModuleModule } from '@landing-components/landing-page-module.module';
-
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { LandingPageModuleModule } from '@landing-components/landing-page-module
     BrowserAnimationsModule,
     LandingPageModuleModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,15 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '@landing-services/data.service';
 import { Observable } from 'rxjs';
-import {
-  trigger,
-  style,
-  transition,
-  animate,
-  keyframes,
-  query,
-  stagger
-} from '@angular/animations';
+import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-posts',
@@ -45,7 +37,8 @@ export class PostsComponent implements OnInit {
   constructor(private data: DataService) {}
 
   ngOnInit() {
-    console.log(this.data);
-    this.data.getPosts().subscribe(data => (this.posts$ = data));
+    this.data.getPosts().subscribe((data) => {
+       this.posts$ = data;
+    });
   }
 }
